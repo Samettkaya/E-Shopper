@@ -17,14 +17,14 @@ namespace DataAccess.Concrete.EntityFramework
 
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Brands> Brands { get; set; }
-        public DbSet<Addresses> Addresses { get; set; }
-        public DbSet<Categories> Categories { get; set; }
-        public DbSet<Cities> Cities { get; set; }
-        public DbSet<Countries> Countries { get; set; }
-        public DbSet<OrderDetails> OrderDetails { get; set; }
-        public DbSet<Orders> Orders { get; set; }
-        public DbSet<OrderStatuses> OrderStatuses { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderStatus> OrderStatuses { get; set; }
 
 
 

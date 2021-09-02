@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Entities.Concrete
 {
-    public class OrderDetails:IEntity
+    public class OrderDetail:IEntity
     {
         public int Id { get; set; }
         public int OrderId { get; set; }

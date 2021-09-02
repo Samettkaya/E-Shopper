@@ -3,7 +3,7 @@ using Entities.Concrete;
 
 namespace DataAccess.Abstract
 {
-    public interface IOrderStatusDal : IEntityRepository<OrderStatuses>
+    public interface IOrderStatusDal : IEntityRepository<OrderStatus>
     {
     }
 }

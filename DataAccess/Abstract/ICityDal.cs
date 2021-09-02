@@ -3,7 +3,7 @@ using Entities.Concrete;
 
 namespace DataAccess.Abstract
 {
-    public interface ICityDal : IEntityRepository<Cities>
+    public interface ICityDal : IEntityRepository<City>
     {
     }
 }
