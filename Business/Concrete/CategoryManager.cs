@@ -22,6 +22,12 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CategoryAdd);
         }
 
+        public IResult Delete(Category category)
+        {
+            _categoryDal.Delete(category);
+            return new SuccessResult(Messages.CategoryDelete);
+        }
+
         public IDataResult<List<Category>> GetAll()
         {
             return new SuccessDataResult<List<Category>>(_categoryDal.GetAll(), Messages.GetAllCategory);
@@ -30,6 +36,13 @@ namespace Business.Concrete
         public IDataResult<Category> GetById(int categoryId)
         {
             return new SuccessDataResult<Category>(_categoryDal.Get(c => c.Id == categoryId),Messages.GetByIdCategory);
+        }
+
+        public IResult Update(Category category)
+        {
+            _categoryDal.Update(category);
+
+            return new SuccessResult(Messages.CategoryUpdate);
         }
     }
 }

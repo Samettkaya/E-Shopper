@@ -4,7 +4,6 @@ using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
-using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -35,6 +34,12 @@ namespace Business.Concrete
 
         }
 
+        public IResult Delete(Product product)
+        {
+            _productDal.Delete(product);
+            return new SuccessResult(Messages.ProductDelete);
+        }
+
         public IDataResult<List<Product>> GetAll()
         {
             return new SuccessDataResult<List<Product>>(_productDal.GetAll(),Messages.ProductsListed);
@@ -44,6 +49,13 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<Product>>
                 (_productDal.GetAll(p=>p.CategoryId==categoryId),Messages.GetAllByCategory);
+        }
+
+        public IResult Update(Product product)
+        {
+            _productDal.Update(product);
+            return new SuccessResult(Messages.ProductUpdate);
+
         }
     }
 }
