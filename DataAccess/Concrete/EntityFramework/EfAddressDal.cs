@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfAddressDal : EfEntityRepositoryBase<Address, DatabaseContext>, IAddressDal
+    public class EfAddressDal : EfEntityRepositoryBase<Address, Context>, IAddressDal
     {
         public List<AddressDetailDto> GetAddressDetails(Expression<Func<Address, bool>> filter = null)
         {

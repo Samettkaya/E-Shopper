@@ -8,7 +8,7 @@ using System.Text;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfBasketDal : EfEntityRepositoryBase<Basket,DatabaseContext>, IBasketDal
+    public class EfBasketDal : EfEntityRepositoryBase<Basket,Context>, IBasketDal
     {
         
     }
