@@ -6,7 +6,7 @@ namespace Entities.Concrete
     public class City : IEntity
 
     {
-        public int Id { get; set; }
+        public int CityId { get; set; }
         public int CountryId { get; set; }
         public string Name { get; set; }
         public DateTime CreateDate { get; set; }

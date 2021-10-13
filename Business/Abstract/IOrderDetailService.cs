@@ -6,11 +6,9 @@ using System.Text;
 
 namespace Business.Abstract
 {
-    public interface IOrderService
+    public interface IOrderDetailService
     {
-       
-        IResult Add(Order order);
-        IResult Delete(Order order);
-        
+        IDataResult<List<OrderDetail>> GetAll();
+        IDataResult<OrderDetail> GetById(int orderDetailId);
     }
 }

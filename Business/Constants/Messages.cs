@@ -1,4 +1,5 @@
 ﻿
+using Core.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -27,7 +28,7 @@ namespace Business.Constants
         // Categori
 
         public static string CategoryAdd = "Kategori Eklendi";
-        public static string GetAllCategory = "Tüm Kategoriler Listelendi";
+        public static string GetOrderDetailGet = "Tüm Kategoriler Listelendi";
         public static string GetByIdCategory = "Kategori Listelendi";
         public static string CategoryDelete = "Kategori Silindi";
         public static string CategoryUpdate = "Kategori Güncelendi";
@@ -46,6 +47,20 @@ namespace Business.Constants
         public static string AddressDelete = "Adres Silindi";
         public static string AddressUpdate = "Adres Güncelendi";
 
-       
+
+        //Users
+        public static string UserRegister = "Kayıt olundu";
+        public static string UserLoginNotFound = "Kullanıcı Bulunamadı";
+        public static string UserLoginPasswordErrors = "Şifre Yanlış";
+        public static string UserLogin = "Giriş Yapıldı";
+        public static string UserAvailable = "Kullanıcı Mevcut";
+        public static string TokenCreated = "Token oluşturuldu";
+
+        public static string BasketDelete { get; internal set; }
+        public static string BasketAdd { get; internal set; }
+        public static string BasketGetAll { get; internal set; }
+        public static string OrderAdd { get; internal set; }
+        public static string OrderDelete { get; internal set; }
+        public static string OrderDetailGetAll { get; internal set; }
     }
 }

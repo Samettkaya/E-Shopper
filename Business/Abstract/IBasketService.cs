@@ -10,6 +10,7 @@ namespace Business.Abstract
     {
         IDataResult<List<Basket>> GetAll();
         IResult Add(Basket basket);
-
+        IResult Delete(Basket basket);
+        IResult Update(Basket basket);
     }
 }
