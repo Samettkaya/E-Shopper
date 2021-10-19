@@ -23,12 +23,20 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<EfBasketDal>().As<IBasketDal>();
             builder.RegisterType<EfCategoryDal>().As<ICategoryDal>();
             builder.RegisterType<EfBrandDal>().As<IBrandDal>();
+            builder.RegisterType<EfUserDal>().As<IUserDal>();
+            builder.RegisterType<EfAddressDal>().As<IAddressDal>();
+            builder.RegisterType<EfOrderDal>().As<IOrderDal>();
+            builder.RegisterType<EfOrderDetailDal>().As<IOrderDetailDal>();
 
             builder.RegisterType<ProductManager>().As<IProductService>();
             builder.RegisterType<BasketManager>().As<IBasketService>();
             builder.RegisterType<CategoryManager>().As<ICategoryService>();
             builder.RegisterType<BrandManager>().As<IBrandService>();
+            builder.RegisterType<UserManager>().As<IUserService>();
+            builder.RegisterType<OrderManager>().As<IOrderService>();
+            builder.RegisterType<OrderDetailManager>().As<IOrderDetailService>();
 
+            builder.RegisterType<AuthManager>().As<IAuthService>();
             builder.RegisterType<JwtHelper>().As<ITokenHelper>();
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
