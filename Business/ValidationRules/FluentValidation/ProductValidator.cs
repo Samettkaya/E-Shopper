@@ -1,19 +1,17 @@
-﻿
+﻿using Entities.Concrete;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Business.ValidationRules.FluentValidation
 {
-    //public class ProductValidator : AbstractValidator<Product>
-    //{
-    //    public ProductValidator()
-    //    {
-           
+    public class ProductValidator : AbstractValidator<Product>
+    {
+        public ProductValidator()
+        {
+            RuleFor(b => b.BrandId).NotEmpty().WithMessage("Marka Adı boş olamaz");
+            RuleFor(b => b.CategoryId).NotEmpty().WithMessage("Kategori Adı boş olamaz");
+            RuleFor(b => b.Name).NotEmpty().WithMessage("Ürün Adı boş olamaz");
+            RuleFor(b => b.Price).NotEmpty().WithMessage("Ürün fiyatı boş olamaz");
 
-    //    }
-
-       
-    //}
+        }
+    }
 }
