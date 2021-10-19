@@ -1,4 +1,4 @@
-﻿namespace Business.Concrete
+﻿amespace Business.Concrete
 {
     public class OrderDetailService
     {
