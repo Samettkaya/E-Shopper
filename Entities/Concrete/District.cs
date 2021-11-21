@@ -3,10 +3,12 @@ using System;
 
 namespace Entities.Concrete
 {
-    public class Country : IEntity
+    public class District : IEntity
+
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int DistrictId { get; set; }
+        public int CityId { get; set; }
+        public string DistrictName { get; set; }
         public DateTime CreateDate { get; set; }
         public bool Active { get; set; }
     }

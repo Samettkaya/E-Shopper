@@ -7,8 +7,8 @@ namespace Entities.Concrete
 
     {
         public int CityId { get; set; }
-        public int CountryId { get; set; }
-        public string Name { get; set; }
+        public string CityName { get; set; }
+        public int PlateNo { get; set; }
         public DateTime CreateDate { get; set; }
         public bool Active { get; set; }
     }

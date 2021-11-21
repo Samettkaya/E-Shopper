@@ -8,6 +8,7 @@ using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
+using Entities.DTOs;
 using System.Collections.Generic;
 using System.Text;
 
@@ -27,18 +28,9 @@ namespace Business.Concrete
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
-            //iş kuralları
-
-            if (product.CategoryId == 1)
-            {
-                return new ErrorResult("Bu kategoriye ürün kabul edilmiyor");
-            }
-            else
-            {
-                _productDal.Add(product);
-                return new SuccessResult(Messages.ProductAdd);
-            }
-
+            _productDal.Add(product);
+            return new SuccessResult(Messages.ProductAdd);
+           
         }
 
         //[SecuredOperation("admin")]
@@ -57,6 +49,11 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<Product>>
                 (_productDal.GetAll(p=>p.CategoryId==categoryId),Messages.GetAllByCategory);
+        }
+
+        public IDataResult<List<ProductDetailDto>> GetAllCarDetail()
+        {
+            return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetail());
         }
 
         //[SecuredOperation("admin")]

@@ -6,6 +6,7 @@ using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -54,6 +55,22 @@ namespace Business.Concrete
             return new SuccessDataResult<Address>(_addressDal.Get(a => a.Id ==id),Messages.AddressGetById);
         }
 
+
+        public IDataResult<List<AddressDetailDto>> GetAllAddressDetail()
+        {
+            return new SuccessDataResult<List<AddressDetailDto>>(_addressDal.GetAddressDetails());
+        }
+
+        public IDataResult<List<AddressCityUserDto>> AddressCityUserDto()
+        {
+            return new SuccessDataResult<List<AddressCityUserDto>>(_addressDal.GetAddressCityUserDetails());
+        }
+
      
+
+        public IDataResult<List<Address>> GetByUsers(int userId)
+        {
+            return new SuccessDataResult<List<Address>>(_addressDal.GetAll(a => a.UserId == userId), Messages.AddressGetById);
+        }
     }
 }
