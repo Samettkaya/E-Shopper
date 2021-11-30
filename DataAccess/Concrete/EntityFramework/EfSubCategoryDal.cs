@@ -4,9 +4,8 @@ using Entities.Concrete;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfCountryDal : EfEntityRepositoryBase<Country, Context>, ICountryDal
+    public class EfSubCategoryDal : EfEntityRepositoryBase<SubCategory, Context>, ISubCategoryDal
     {
 
     }
-
 }

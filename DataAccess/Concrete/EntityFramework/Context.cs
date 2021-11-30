@@ -20,8 +20,11 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<SubCategory> SubCategories { get; set; }
+        public DbSet<ASubCategory> ASubCategories { get; set; }
         public DbSet<City> Cities { get; set; }
-        public DbSet<Country> Countries { get; set; }
+        public DbSet<District> Districts { get; set; }
+        public DbSet<Neighbourhood> Neighbourhoods { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderStatus> OrderStatuses { get; set; }
