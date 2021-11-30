@@ -56,16 +56,9 @@ namespace Business.Concrete
         }
 
 
-        public IDataResult<List<AddressDetailDto>> GetAllAddressDetail()
-        {
-            return new SuccessDataResult<List<AddressDetailDto>>(_addressDal.GetAddressDetails());
-        }
+      
 
-        public IDataResult<List<AddressCityUserDto>> AddressCityUserDto()
-        {
-            return new SuccessDataResult<List<AddressCityUserDto>>(_addressDal.GetAddressCityUserDetails());
-        }
-
+   
      
 
         public IDataResult<List<Address>> GetByUsers(int userId)

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Entities.Concrete
 {
-    public class Address:IEntity
+    public class Address : IEntity
     {
         public int Id { get; set; }
         public int UserId { get; set; }
@@ -13,8 +13,9 @@ namespace Entities.Concrete
         public string LastName { get; set; }
         public string Phone { get; set; }
         public int CityId { get; set; }
+        public int DistrictId { get; set; }
+        public int NeighbourhoodId { get; set; }
         public string AddressDetail { get; set; }
-        public string PostalCode { get; set; }
         public string AddressTitle { get; set; }
         public DateTime CreateDate { get; set; }
         public bool Active { get; set; }

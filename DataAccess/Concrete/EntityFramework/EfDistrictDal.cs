@@ -4,7 +4,7 @@ using Entities.Concrete;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfCityDal : EfEntityRepositoryBase<City, Context>, ICityDal
+    public class EfDistrictDal : EfEntityRepositoryBase<District, Context>, IDistrictDal
     {
 
     }

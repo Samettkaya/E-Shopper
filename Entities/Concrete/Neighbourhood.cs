@@ -7,7 +7,7 @@ namespace Entities.Concrete
 
     {
         public int NeighbourhoodId { get; set; }
-        public int DistictId { get; set; }
+        public int DistrictId { get; set; }
         public string NeighbourhoodName { get; set; }
         public string PostalCode { get; set; }
         public DateTime CreateDate { get; set; }

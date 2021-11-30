@@ -27,6 +27,10 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<EfAddressDal>().As<IAddressDal>();
             builder.RegisterType<EfOrderDal>().As<IOrderDal>();
             builder.RegisterType<EfOrderDetailDal>().As<IOrderDetailDal>();
+            builder.RegisterType<EfSubCategoryDal>().As<ISubCategoryDal>();
+            builder.RegisterType<EfASubCategoryDal>().As<IASubCategoryDal>();
+            builder.RegisterType<EfDistrictDal>().As<IDistrictDal>();
+            builder.RegisterType<EfNeighbourhoodDal>().As<INeighbourhoodDal>();
 
             builder.RegisterType<ProductManager>().As<IProductService>();
             builder.RegisterType<BasketManager>().As<IBasketService>();
@@ -35,6 +39,10 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<UserManager>().As<IUserService>();
             builder.RegisterType<OrderManager>().As<IOrderService>();
             builder.RegisterType<OrderDetailManager>().As<IOrderDetailService>();
+            builder.RegisterType<SubCategoryManager>().As<ISubCategoryService>();
+            builder.RegisterType<ASubCategoryManager>().As<IASubCategoryService>();
+            builder.RegisterType<DistrictManager>().As<IDistrictService>();
+            builder.RegisterType<NeighbourhoodManager>().As<INeighbourhoodService>();
 
             builder.RegisterType<AuthManager>().As<IAuthService>();
             builder.RegisterType<JwtHelper>().As<ITokenHelper>();

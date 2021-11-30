@@ -8,7 +8,7 @@ namespace DataAccess.Abstract
 {
     public interface IAddressDal : IEntityRepository<Address>
     {
-        List<AddressDetailDto> GetAddressDetails(Expression<Func<Address, bool>> filter = null);
-        List<AddressCityUserDto> GetAddressCityUserDetails(Expression<Func<Address, bool>> filter = null);
+       
+       // List<AddressCityUserDto> GetAddressCityUserDetails(Expression<Func<Address, bool>> filter = null);
     }
 }
