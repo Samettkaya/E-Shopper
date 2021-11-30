@@ -21,7 +21,7 @@ namespace Business.ValidationRules.FluentValidation
         {
             RuleFor(b => b.CityId).NotEmpty().WithMessage("İl alanı boş bırakılamaz");
             RuleFor(b => b.AddressDetail).NotEmpty().WithMessage("Adres alanı boş olamaz");
-            RuleFor(b => b.PostalCode).NotEmpty().WithMessage("Posta kodu boş olamaz");
+          
 
 
         }

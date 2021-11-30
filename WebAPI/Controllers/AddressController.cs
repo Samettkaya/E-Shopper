@@ -102,29 +102,7 @@ namespace WebAPI.Controllers
         }
 
 
-        [HttpGet("getalldto")]
-        public IActionResult GetAllDto()
-        {
-            var result = _addressService.GetAllAddressDetail();
-
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-
-            return BadRequest(result);
-        }
-        [HttpGet("getcityuserdto")]
-        public IActionResult GetAllCityUserDto()
-        {
-            var result = _addressService.AddressCityUserDto();
-
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-
-            return BadRequest(result);
-        }
+     
+      
     }
 }
