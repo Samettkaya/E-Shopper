@@ -56,11 +56,31 @@ namespace Business.Constants
         public static string UserAvailable = "Kullanıcı Mevcut";
         public static string TokenCreated = "Token oluşturuldu";
 
-        public static string BasketDelete { get; internal set; }
-        public static string BasketAdd { get; internal set; }
-        public static string BasketGetAll { get; internal set; }
-        public static string OrderAdd { get; internal set; }
-        public static string OrderDelete { get; internal set; }
-        public static string OrderDetailGetAll { get; internal set; }
+        //Baskets
+        public static string BasketDelete = "Sepet Silindi";
+        public static string BasketAdd = "Sepete Eklendi";
+        public static string BasketGetAll = "Sepet Listelendi";
+
+
+        //Order
+        public static string OrderAdd = "Sipariş Verildi";
+        public static string OrderDelete = "Sipariş İptal Edildi!";
+        public static string OrderDetailGetAll = "";
+
+
+
+        //SubCategories
+        public static string SubCategoryAdd = "Alt Kategori Eklendi";
+        public static string SubCategoryDelete = "Alt Kategori Silindi";
+        public static string SubCategoryUpdate = "Alt Kategori Güncelendi";
+        public static string SubCategoryGetAll = "Tüm Alt Kategoriler Listelendi";
+        public static string GetByIdSubCategory = "Alt Kategoi Listelendi";
+
+        //ASubCategories
+        public static string ASubCategoryAdd = "En Alt Kategori Eklendi";
+        public static string ASubCategoryDelete = "En Alt Kategori Silindi";
+        public static string ASubCategoryGetAll = "Tüm En Alt Kategori Listelendi";
+        public static string ASubCategoryGetById = "En Alt Kategri Listelendi";
+        public static string ASubCategoryUpdate = "En Alt Kategori Güncelendi";
     }
 }
