@@ -11,19 +11,20 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductsController : ControllerBase
+    public class SubCategoriesController : ControllerBase
     {
-        IProductService _productService;
 
-        public ProductsController(IProductService productService)
+        ISubCategoryService _subCategoryService;
+
+        public SubCategoriesController(ISubCategoryService subCategoryService)
         {
-            _productService = productService;
+            _subCategoryService = subCategoryService;
         }
 
         [HttpGet("getall")]
         public IActionResult GetList()
         {
-            var result = _productService.GetAll();
+            var result = _subCategoryService.GetAll();
 
             if (result.Success)
             {
@@ -32,11 +33,10 @@ namespace WebAPI.Controllers
 
             return BadRequest(result);
         }
-
-        [HttpGet("getbycategory")]
-        public IActionResult GetAllByCategory(int categoryId)
+        [HttpGet("getbyid")]
+        public IActionResult GetById(int id)
         {
-            var result = _productService.GetAllByCategory(categoryId);
+            var result = _subCategoryService.GetById(id);
 
             if (result.Success)
             {
@@ -46,22 +46,12 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        [HttpGet("getproductdetail")]
-        public IActionResult GetProductDetails(int categoryId)
-        {
-            var result = _productService.GetAllProductDetail();
-            if (result.Success)
-            {
-                return Ok(result);
-            }
 
-            return BadRequest(result);
-        }
 
         [HttpPost("add")]
-        public IActionResult Add(Product product)
+        public IActionResult Add(SubCategory subCategory)
         {
-            var result = _productService.Add(product);
+            var result = _subCategoryService.Add(subCategory);
 
             if (result.Success)
             {
@@ -71,11 +61,10 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-
         [HttpPost("delete")]
-        public IActionResult Delete(Product product)
+        public IActionResult Delete(SubCategory subCategory)
         {
-            var result = _productService.Delete(product);
+            var result = _subCategoryService.Delete(subCategory);
 
             if (result.Success)
             {
@@ -86,9 +75,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("update")]
-        public IActionResult Update(Product product)
+        public IActionResult Update(SubCategory subCategory)
         {
-            var result = _productService.Update(product);
+            var result = _subCategoryService.Update(subCategory);
 
             if (result.Success)
             {

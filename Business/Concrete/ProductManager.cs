@@ -51,7 +51,7 @@ namespace Business.Concrete
                 (_productDal.GetAll(p=>p.CategoryId==categoryId),Messages.GetAllByCategory);
         }
 
-        public IDataResult<List<ProductDetailDto>> GetAllCarDetail()
+        public IDataResult<List<ProductDetailDto>> GetAllProductDetail()
         {
             return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetail());
         }
