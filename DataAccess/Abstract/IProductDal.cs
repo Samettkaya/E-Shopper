@@ -12,7 +12,7 @@ namespace DataAccess.Abstract
     {
        
         List<ProductDetailDto> GetProductDetail(Expression<Func<Product, bool>> filter = null);
-        List<ProductDetailDto> AddProductDetail(Expression<Func<Product, bool>> filter = null);
+        ProductDetailDto AddProductDetail(Expression<Func<Product, bool>> filter = null);
 
     }
 }

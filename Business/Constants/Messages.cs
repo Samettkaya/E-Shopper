@@ -18,7 +18,6 @@ namespace Business.Constants
         public static string AuthorizationDenied="Yetkiniz yok.";
 
         // Product
-
         public static string ProductAdd = "Ürün eklendi";
         public static string GetAllByCategory = "Kategoriye ait ürün listelendi";
         public static string ProductsListed = "Ürünler listelendi";
@@ -26,7 +25,6 @@ namespace Business.Constants
         public static string ProductDelete = "Ürün Silindi";
 
         // Categori
-
         public static string CategoryAdd = "Kategori Eklendi";
         public static string GetOrderDetailGet = "Tüm Kategoriler Listelendi";
         public static string GetByIdCategory = "Kategori Listelendi";
@@ -47,7 +45,6 @@ namespace Business.Constants
         public static string AddressDelete = "Adres Silindi";
         public static string AddressUpdate = "Adres Güncelendi";
 
-
         //Users
         public static string UserRegister = "Kayıt olundu";
         public static string UserLoginNotFound = "Kullanıcı Bulunamadı";
@@ -61,13 +58,10 @@ namespace Business.Constants
         public static string BasketAdd = "Sepete Eklendi";
         public static string BasketGetAll = "Sepet Listelendi";
 
-
         //Order
         public static string OrderAdd = "Sipariş Verildi";
         public static string OrderDelete = "Sipariş İptal Edildi!";
         public static string OrderDetailGetAll = "";
-
-
 
         //SubCategories
         public static string SubCategoryAdd = "Alt Kategori Eklendi";
@@ -82,5 +76,26 @@ namespace Business.Constants
         public static string ASubCategoryGetAll = "Tüm En Alt Kategori Listelendi";
         public static string ASubCategoryGetById = "En Alt Kategri Listelendi";
         public static string ASubCategoryUpdate = "En Alt Kategori Güncelendi";
+
+        //District
+        public static string DistrictAdd = "İlçe Eklendi";
+        public static string DistrictDelete = "İlçe Silindi";
+        public static string DistrictGetAll = "Tüm İlçe Listelendi";
+        public static string DistrictGetById = "İlçe Listelendi";
+        public static string DistrictUpdate = "İlçe Güncelendi";
+
+        //Neighbourhood
+        public static string NeighbourhoodAdd = "Mahalle Eklendi";
+        public static string NeighbourhoodDelete = "Mahalle Silindi";
+        public static string NeighbourhoodGetAll = "Tüm Mahalle Listelendi";
+        public static string NeighbourhoodGetById = "Mahalle Listelendi";
+        public static string NeighbourhoodUpdate = "Mahalle Güncelendi";
+
+        //City
+        public static string CityAdd = "İlçe Eklendi";
+        public static string CityDelete = "İlçe Silindi";
+        public static string CityGetAll = "Tüm İlçe Listelendi";
+        public static string CityGetByID = "İlçe Listelendi";
+        public static string CityUpdate = "İlçe Güncellendi";
     }
 }

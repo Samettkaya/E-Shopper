@@ -31,6 +31,8 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<EfASubCategoryDal>().As<IASubCategoryDal>();
             builder.RegisterType<EfDistrictDal>().As<IDistrictDal>();
             builder.RegisterType<EfNeighbourhoodDal>().As<INeighbourhoodDal>();
+            builder.RegisterType<EfCityDal>().As<ICityDal>();
+
 
             builder.RegisterType<ProductManager>().As<IProductService>();
             builder.RegisterType<BasketManager>().As<IBasketService>();
@@ -43,6 +45,8 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<ASubCategoryManager>().As<IASubCategoryService>();
             builder.RegisterType<DistrictManager>().As<IDistrictService>();
             builder.RegisterType<NeighbourhoodManager>().As<INeighbourhoodService>();
+            builder.RegisterType<CityManager>().As<ICityService>();
+
 
             builder.RegisterType<AuthManager>().As<IAuthService>();
             builder.RegisterType<JwtHelper>().As<ITokenHelper>();

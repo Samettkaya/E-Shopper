@@ -14,7 +14,7 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfProductDal : EfEntityRepositoryBase<Product, Context>, IProductDal
     {
-        public List<ProductDetailDto> AddProductDetail(Expression<Func<Product, bool>> filter = null)
+        public ProductDetailDto AddProductDetail(Expression<Func<Product, bool>> filter = null)
         {
             throw new NotImplementedException();
         }

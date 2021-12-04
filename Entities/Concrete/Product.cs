@@ -15,6 +15,7 @@ namespace Entities.Concrete
         public decimal Price { get; set; }
         public DateTime CreateDate { get; set; }
         public bool Active { get; set; }
+        public ICollection<Category> Categories { get; set; }
 
     }
 }
