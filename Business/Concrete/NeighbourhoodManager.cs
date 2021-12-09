@@ -37,7 +37,7 @@ namespace Business.Concrete
 
         public IDataResult<Neighbourhood> GetById(int Id)
         {
-            return new SuccessDataResult<Neighbourhood>(_neighbourhoodDal.Get(n => n.NeighbourhoodId == Id),Messages.NeighbourhoodGetById);
+            return new SuccessDataResult<Neighbourhood>(_neighbourhoodDal.Get(n => n.Id == Id),Messages.NeighbourhoodGetById);
         }
 
         public IResult Update(Neighbourhood neighbourhood)
