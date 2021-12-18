@@ -102,7 +102,20 @@ namespace WebAPI.Controllers
         }
 
 
-     
-      
+        [HttpGet("getbydto")]
+        public IActionResult GetAddressCityUserDetails(int userId)
+        {
+            var result = _addressService.GetAddressCityUserDetails(userId);
+
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+        }
+
+
+
     }
 }

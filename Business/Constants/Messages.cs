@@ -44,6 +44,7 @@ namespace Business.Constants
         public static string AddressGetById = "Adres Listelendi";
         public static string AddressDelete = "Adres Silindi";
         public static string AddressUpdate = "Adres Güncelendi";
+        public static string AddressGetAllDetail = "Adres Detayı";
 
         //Users
         public static string UserRegister = "Kayıt olundu";
@@ -97,5 +98,7 @@ namespace Business.Constants
         public static string CityGetAll = "Tüm İlçe Listelendi";
         public static string CityGetByID = "İlçe Listelendi";
         public static string CityUpdate = "İlçe Güncellendi";
+
+    
     }
 }

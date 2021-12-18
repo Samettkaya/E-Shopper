@@ -12,12 +12,13 @@ namespace Entities.Concrete
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Phone { get; set; }
+        public string AddressDetail { get; set; }
+        public string AddressTitle { get; set; }
         public int CityId { get; set; }
         public int DistrictId { get; set; }
         public int NeighbourhoodId { get; set; }
-        public string AddressDetail { get; set; }
-        public string AddressTitle { get; set; }
         public DateTime CreateDate { get; set; }
         public bool Active { get; set; }
+ 
     }
 }

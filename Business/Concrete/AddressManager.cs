@@ -56,14 +56,16 @@ namespace Business.Concrete
         }
 
 
-      
-
-   
      
 
         public IDataResult<List<Address>> GetByUsers(int userId)
         {
             return new SuccessDataResult<List<Address>>(_addressDal.GetAll(a => a.UserId == userId), Messages.AddressGetById);
+        }
+
+        public IDataResult<List<AddressCityUserDto>> GetAddressCityUserDetails(int userId)
+        {
+            return new SuccessDataResult<List<AddressCityUserDto>>(_addressDal.GetAddressCityUserDetails(a=>a.UserId== userId),Messages.AddressGetAllDetail);   
         }
     }
 }

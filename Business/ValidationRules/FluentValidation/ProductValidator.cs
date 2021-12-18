@@ -19,7 +19,7 @@ namespace Business.ValidationRules.FluentValidation
     {
         public AddressValidator()
         {
-            RuleFor(b => b.CityId).NotEmpty().WithMessage("İl alanı boş bırakılamaz");
+           
             RuleFor(b => b.AddressDetail).NotEmpty().WithMessage("Adres alanı boş olamaz");
           
 

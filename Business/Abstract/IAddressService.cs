@@ -15,6 +15,8 @@ namespace Business.Abstract
         IDataResult<Address> GetById(int id);
         IDataResult<List<Address>> GetByUsers(int userId);
         IDataResult<List<Address>> GetAll();
-       
+        IDataResult<List<AddressCityUserDto>> GetAddressCityUserDetails(int userId );
+
+
     }
 }

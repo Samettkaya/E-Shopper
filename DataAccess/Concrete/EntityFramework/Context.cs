@@ -8,11 +8,11 @@ using System.Text;
 namespace DataAccess.Concrete.EntityFramework
 {
     //Context : Db tabloları ile proje classlarını bağlamak
-    public class Context: Microsoft.EntityFrameworkCore.DbContext
+    public class Context: DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=E_Shopper;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-ERIELCA;Database=EShopper;Trusted_Connection=true");
         }
 
         public DbSet<Basket> Baskets { get; set; }
